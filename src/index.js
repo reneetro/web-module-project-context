@@ -9,11 +9,15 @@ import './css/ShoppingCart.css';
 
 import App from './App';
 
+import ProductProvider from './contexts/ProductContext';
+
 const AppWithRouter = withRouter(App);
 
 ReactDOM.render(
 	<Router>
-		<AppWithRouter />
+		<ProductProvider>
+			<AppWithRouter />
+		</ProductProvider>
 	</Router>,
 	document.getElementById('root')
 );
